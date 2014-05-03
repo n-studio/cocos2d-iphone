@@ -159,7 +159,7 @@ static inline ccTex2F __t(ccVertex2F v )
 	free(_buffer); _buffer = NULL;
 	
 	glDeleteBuffers(1, &_vbo); _vbo = 0;
-	glDeleteVertexArrays(1, &_vao); _vao = 0;
+	glDeleteVertexArrays(1, &_vao); ccGLBindVAO(0); _vao = 0;
 	
 	[super dealloc];
 }
